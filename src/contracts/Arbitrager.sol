@@ -1,6 +1,6 @@
 pragma solidity =0.6.6;
 
-import 'sushiswap-master/contracts/uniswapv2/libraries/UniswapV2Library.sol';
+import 'sushiswap/contracts/uniswapv2/libraries/UniswapV2Library.sol';
 import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
 import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
 import '@uniswap/v2-core/contracts/interfaces/IERC20.sol';

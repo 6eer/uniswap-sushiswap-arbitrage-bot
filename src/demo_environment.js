@@ -13,13 +13,13 @@ const ERC20PresetMinterPauser = require('@openzeppelin/contracts/build/contracts
 let token0 = new web3.eth.Contract(ERC20PresetMinterPauser.abi,'',{data:ERC20PresetMinterPauser.bytecode})
 let token1 = new web3.eth.Contract(ERC20PresetMinterPauser.abi,'',{data:ERC20PresetMinterPauser.bytecode})
 //arbitrager
-const Arbitrager = require('./build/contracts/Arbitrager.json')
+const Arbitrager = require('../build/contracts/Arbitrager.json')
 const arbitrager = new web3.eth.Contract(Arbitrager.abi,'',{data:Arbitrager.bytecode})
 //addresses
 const addr0 = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac'//sushiswap factory
 const addr1 = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'//uniswap router
 //utils
-const Utils = require('./build/contracts/Utils.json')
+const Utils = require('../build/contracts/Utils.json')
 const utils = new web3.eth.Contract(Utils.abi,'',{data:Utils.bytecode})
 
 async function liquidity(amount0,amount1,amount2,amount3,amount4) {

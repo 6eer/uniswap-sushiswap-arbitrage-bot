@@ -6,7 +6,7 @@ const Web3 = require('web3')
 const IFactory = require('@uniswap/v2-core/build/IUniswapV2Factory.json')
 const IPair = require('@uniswap/v2-core/build/IUniswapV2Pair.json')  
 const IRouter = require('@uniswap/v2-periphery/build/IUniswapV2Router02.json')
-const Utils = require('./build/contracts/Utils.json')
+const Utils = require('../build/contracts/Utils.json')
 const IERC20 = require('@uniswap/v2-periphery/build/IERC20.json')
 
 //importing parameters from .env (mostly given)

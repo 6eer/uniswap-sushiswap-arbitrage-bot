@@ -4,7 +4,7 @@ import '@uniswap/lib/contracts/libraries/Babylonian.sol';
 import '@uniswap/v2-periphery/contracts/libraries/SafeMath.sol';
 import './FullMath.sol';
 
-contract AuxiliaryMath  {
+contract Utils {
     using SafeMath for uint256;
 
     // computes the direction and magnitude of the profit-maximizing trade
