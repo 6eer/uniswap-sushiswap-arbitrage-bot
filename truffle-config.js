@@ -3,6 +3,7 @@ require('dotenv').config()
 const projectId = process.env.PROJECT_ID;
 
 module.exports = {
+  contracts_directory: "./src/contracts",
   networks: {
      development: {
       host: "127.0.0.1",     // Localhost (default: none)
