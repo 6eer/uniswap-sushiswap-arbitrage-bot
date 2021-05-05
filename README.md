@@ -1,15 +1,15 @@
 # Making arbitrage between Uniswap V2 and Sushiswap
 
 ## Index
-1) [What its included in this repo?](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#what-its-included-in-this-repo)
-2) [Installation](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#installation)
-3) [Running the demo](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#running-the-demo)
-4) [Running on a ethereum network](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#running-on-a-ethereum-network)
-5) [Considerations for production](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#considerations-for-production)
-6) [Useful resources](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#useful-resources)
-7) [License](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#license)
++ [What its included in this repo?](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#what-its-included-in-this-repo)
++ [Installation](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#installation)
++ [Running the demo](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#running-the-demo)
++ [Running on a ethereum network](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#running-on-a-ethereum-network)
++ [Considerations for production](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#considerations-for-production)
++ [Useful resources](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#useful-resources)
++ [License](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#license)
 
-## 1-What its included in this repo?
+## What its included in this repo?
 
 1) Two bots written in JS that observe the prices changes on a pre user-defined liquidity pool at Uniswap V2 / Sushiswap and determine if its possibly to make a profit buying tokens cheaper at one exchange to selling them after for an bigger amount in the other, keeping the difference (profit). They only differ in how they get the tokens for making the arbitrage. One bot uses **flashswap**, this kind of swaps basically works as if you were taking a ‘free of charge' loan (no fee associated like normal loans works on 'real banks') to borrow the token needed to do the trade, repaying then the loan with some of the tokens you received, keeping the remaining to you. The other uses **normal swaps**, this bot require you to be holding the tokens needed to do the trade but it contrast it cost less gas to execute. In both cases Uniswap, like all the others exchanges, charges on you a fee for using their services (swapping tokens in this case), this fee currently is 0.3%. To see more on how flashswap or normal swaps works visit the [Uniswap docs](https://uniswap.org/docs/v2/).
 
@@ -19,7 +19,7 @@
 
 First it will be explained how to install the required tools (probably you have already installed some of them, feel free to jump to the sections that you wish). Then introduce how to run the demo, here I assume that you are kind of newbie in blockchain and you don’t understand quiet well whats happening so its deeply explained. After, a very basic guide line to put the bots to work on an ethereum network, mainnet or testnet, I assume you know what you are doing at this point. Finally some improvements for a possible production stage and useful resourses are given.
 
-## 2-Installation
+## Installation
 
 On Debian based linux distro (like Ubuntu), open a terminal and follow the instructions above.
 
@@ -47,7 +47,7 @@ npm install
 npm install -g ganache-cli
 git clone https://github.com/sushiswap/sushiswap.git
 ```
-## 3-Running the demo
+## Running the demo
 
 1) The ‘annoying’ part. In order to execute the bots you need to create an account on an ethereum provider, companies that maintain their own ethereum nodes, which you can use generally for free (with limited functions, but for us, it enough) to communicate with the ethereum blockchain. You can use whatever provider you desired (check what services they gives you for free) but for run the demo you need a provider that gives access to an **archive node** (special kind of node) and *Alchemy* do it for free, besides you can sing up with google account, so, its quiet fast. Once logged in, generally you must to create a project and then they assign to it a ‘link’ (indeed its a kind of key) that allow you to uses their services. In Alchemy look like,
 
@@ -77,7 +77,7 @@ node ./src/bot_normalswap.js
 ```
 Once the arbitrage occur (you will notice because the logs on the console) Ctrol+C to stop the bots.
 
-## 4-Running on a ethereum network
+## Running on a ethereum network
 
 1) Need to set up a provider, the code its setted up to use Infura but you can easily change it.
 
@@ -87,7 +87,7 @@ Once the arbitrage occur (you will notice because the logs on the console) Ctrol
 
 4) Assuming you own an account with the enough eth for paying the gas and fees (and if you use normal swap the tokens as well) you are ready to run the bots. **_Remember that as they are, the bots are not ready for production and even with the changes proposed bellow I dont recommend use it for that porpuse, do it at your own risk_**.
 
-## 5-Considerations for production
+## Considerations for production
 
 + Its **_very important_** that you set up an aproppiate value to amountOutMin on
 ```javascript
@@ -111,7 +111,7 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 + Instead of printing to the console, print only the trades on a file.
 
-## 6-Useful resources
+## Useful resources
 
 [Build a Flash Loan Arbitrage Bot on Infura](https://blog.infura.io/build-a-flash-loan-arbitrage-bot-on-infura-part-i/?&utm_source=social&utm_medium=facebook&utm_campaign=Tutorials&utm_content=flashbot1)
 
@@ -119,6 +119,6 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 [Ganache CLI](https://github.com/trufflesuite/ganache-cli/blob/master/README.md)
 
-## 7-License
+## License
 
 [MIT](https://tldrlegal.com/license/mit-license)
