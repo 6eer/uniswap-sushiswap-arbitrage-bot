@@ -8,7 +8,7 @@
 
 3) Proposed improvements for possible production stage.
 
-First it will be explained how to install the required tools (probably you have already installed some of them, feel free to jump to the sections that you wish). Then introduce how to run the demo, here I assume that you are kind of newbie in blockchain and you don’t understand quiet well whats happening so its deeply explained. After a very basic guide line to put the bots to work on an ethereum network, mainnet or testnet, I assume you know what you are doing at this point. Finally some improvements for a possible production stage and useful resourses are given.
+First it will be explained how to install the required tools (probably you have already installed some of them, feel free to jump to the sections that you wish). Then introduce how to run the demo, here I assume that you are kind of newbie in blockchain and you don’t understand quiet well whats happening so its deeply explained. After, a very basic guide line to put the bots to work on an ethereum network, mainnet or testnet, I assume you know what you are doing at this point. Finally some improvements for a possible production stage and useful resourses are given.
 
 ## Installation
 
@@ -32,7 +32,7 @@ nvm install 12.22.1
 4) Clone the repo and install its dependencies.
 ``` bash
 cd
-git clone -enlace-
+git clone https://github.com/6eer/uniswap-sushiswap-arbitrage-bot.git
 cd uniswap.v2-sushiswap-arbitrager
 npm install
 npm install -g ganache-cli
