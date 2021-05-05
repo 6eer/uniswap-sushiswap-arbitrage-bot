@@ -113,7 +113,7 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 ## Useful resources
 
-[Build a Flash Loan Arbitrage Bot on Infura](https://blog.infura.io/build-a-flash-loan-arbitrage-bot-on-infura-part-i/?&utm_source=social&utm_medium=facebook&utm_campaign=Tutorials&utm_content=flashbot1) (if you are lost I personally recommend read this post)
+[Build a Flash Loan Arbitrage Bot on Infura](https://blog.infura.io/build-a-flash-loan-arbitrage-bot-on-infura-part-i/?&utm_source=social&utm_medium=facebook&utm_campaign=Tutorials&utm_content=flashbot1) (If you are lost I personally recommend read this post)
 
 [Uniswap docs](https://uniswap.org/docs/v2/)
 
