@@ -49,7 +49,7 @@ git clone https://github.com/sushiswap/sushiswap.git
 ```
 ## Running the demo
 
-1) The ‘annoying’ part. In order to execute the bots you need to create an account on an ethereum provider, companies that maintain their own ethereum nodes, which you can use generally for free (with limited functions, but for us, it enough) to communicate with the ethereum blockchain. You can use whatever provider you desired (check what services they gives you for free) but for run the demo you need a provider that gives access to an **archive node** (special kind of node) and *Alchemy* do it for free, besides you can sing up with google account, so, its quiet fast. Once logged in, generally you must to create a project and then they assign to it a ‘link’ (indeed its a kind of key) that allow you to uses their services. In Alchemy look like,
+1) The ‘annoying’ part. In order to execute the bots you need to create an account on an ethereum provider, companies that maintain their own ethereum nodes, which you can use generally for free (with limited functions, but for us, it enough) to communicate with the ethereum blockchain. You can use whatever provider you desired (check what services they gives you for free) but for run the demo you need a provider that gives access to an **archive node** (special kind of node) and *Alchemy* do it for free, besides you can sing up with google account, so, its quiet fast. Once logged in, generally you must to create a project and then they assign to it a ‘link’ (indeed its a kind of key) that allows you to uses their services. In Alchemy look like,
 
     https://eth-mainnet.alchemyapi.io/v2/qolQHYLqPhksKzW-QBEzlzdW14pRZnTr
 
@@ -101,7 +101,7 @@ function swapExactTokensForTokens(
 ```
 for safety reasons, if not you could be losing money. see Uniswap docs for more info. (This function is used in bot_normalswap.js and Arbitrajer.sol).
 
-+ You probably wanna embedded the logic available on Utils.sol at the node script, avoiding the cost of deploy the Utils contract.
++ You probably wanna embedded the logic available at Utils.sol on the bots scripts, avoiding the cost of deploy the Utils contract.
 
 + Use child process for each block.
 
@@ -113,7 +113,7 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 ## Useful resources
 
-[Build a Flash Loan Arbitrage Bot on Infura](https://blog.infura.io/build-a-flash-loan-arbitrage-bot-on-infura-part-i/?&utm_source=social&utm_medium=facebook&utm_campaign=Tutorials&utm_content=flashbot1)
+[Build a Flash Loan Arbitrage Bot on Infura](https://blog.infura.io/build-a-flash-loan-arbitrage-bot-on-infura-part-i/?&utm_source=social&utm_medium=facebook&utm_campaign=Tutorials&utm_content=flashbot1) (If  you are lost I personaly reccomen read this post)
 
 [Uniswap docs](https://uniswap.org/docs/v2/)
 
