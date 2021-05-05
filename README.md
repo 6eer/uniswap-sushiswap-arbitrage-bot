@@ -51,7 +51,7 @@ git clone https://github.com/sushiswap/sushiswap.git
 
 1) The ‘annoying’ part. In order to execute the bots you need to create an account on an ethereum provider, companies that maintain their own ethereum nodes, which you can use generally for free (with limited functions, but for us, it enough) to communicate with the ethereum blockchain. You can use whatever provider you desired (check what services they gives you for free) but for run the demo you need a provider that gives access to an **archive node** (special kind of node) and *Alchemy* do it for free, besides you can sing up with google account, so, its quiet fast. Once logged in, generally you must to create a project and then they assign to it a ‘link’ (indeed its a kind of key) that allows you to uses their services. In Alchemy look like,
 
-   <n/>https://eth-mainnet.alchemyapi.io/v2/qolQHYLqPhksKzW-QBEzlzdW14pRZnTr
+   <n/>https://eth-mainnet.alchemyapi.io/v2/qolQHYLqPhksKzW-QBEzlzdW14pRZnTr<n/>
 
 
 2) Create a .env file on the root project directory with the paremeters of the bots, for the demo an example .env with valid parameters can be created as follow
