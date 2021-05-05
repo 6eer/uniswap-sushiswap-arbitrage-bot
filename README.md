@@ -2,7 +2,7 @@
 
 ## What its included in this repo?
 
-1) Two bots written in JS that observe the prices changes on a pre user-defined liquidity pool and determine if its possibly to make a profit buying tokens cheaper at one exchange to selling them after for an bigger amount, keeping the difference (profit). They only differ in how they get the tokens for making the arbitrage. One bot uses **flashswap**, this kind of swaps basically works as if you were taking a ‘free of charge' loan (no fee associated like normal loans works on 'real banks') to borrow the token needed to do the trade, repaying then the loan with some of the tokens you received, keeping the remaining to you. The other uses **normal swaps**, this bot require you to be holding the tokens needed to do the trade but it contrast it cost less gas to execute. In both cases Uniswap, like all the others exchanges, charges on you a fee for using their services (swapping tokens in this case), this fee currently is 0.3%. To see more on how flashswap or normal swaps works visit the [Uniswap docs](https://uniswap.org/docs/v2/).
+1) Two bots written in JS that observe the prices changes on a pre user-defined liquidity pool at Uniswap V2 / Sushiswap and determine if its possibly to make a profit buying tokens cheaper at one exchange to selling them after for an bigger amount in the other, keeping the difference (profit). They only differ in how they get the tokens for making the arbitrage. One bot uses **flashswap**, this kind of swaps basically works as if you were taking a ‘free of charge' loan (no fee associated like normal loans works on 'real banks') to borrow the token needed to do the trade, repaying then the loan with some of the tokens you received, keeping the remaining to you. The other uses **normal swaps**, this bot require you to be holding the tokens needed to do the trade but it contrast it cost less gas to execute. In both cases Uniswap, like all the others exchanges, charges on you a fee for using their services (swapping tokens in this case), this fee currently is 0.3%. To see more on how flashswap or normal swaps works visit the [Uniswap docs](https://uniswap.org/docs/v2/).
 
 2) A demo that you can easily run to see the bots in action. Basically consist on forking ethereum mainnet localy, run the demo script that do the set ups for you and execute the bots.
 
@@ -92,11 +92,11 @@ function swapExactTokensForTokens(
 ```
 for safety reasons, if not you could be losing money. see Uniswap docs for more info. (This function is used in bot_normalswap.js and Arbitrajer.sol).
 
-+ You probably wanna embeded the logic on Utils.sol on the node script avoiding the deploy of the contract.
++ You probably wanna embedded the logic available on Utils.sol at the node script, avoiding the cost of deploy the Utils contract.
 
 + Use child process for each block.
 
-+ If in a new block there is no more profit cancel the early child process spawned.
++ If on a new block there is no more profit cancel the early child process spawned.
 
 + Maybe an improvement on robustness using event subscription to UniswapV2Pair.Swap() and ERC20.Approval() events can be achieved.
 
