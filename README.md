@@ -33,7 +33,7 @@ nvm install 12.22.1
 ``` bash
 cd
 git clone https://github.com/6eer/uniswap-sushiswap-arbitrage-bot.git
-cd uniswap.v2-sushiswap-arbitrager
+cd uniswap-sushiswap-arbitrage-bot
 npm install
 npm install -g ganache-cli
 git clone https://github.com/sushiswap/sushiswap.git
