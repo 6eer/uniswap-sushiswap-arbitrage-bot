@@ -50,9 +50,8 @@ git clone https://github.com/sushiswap/sushiswap.git
 ## Running the demo
 
 1) The ‘annoying’ part. In order to execute the bots you need to create an account on an ethereum provider, companies that maintain their own ethereum nodes, which you can use generally for free (with limited functions, but for us, it enough) to communicate with the ethereum blockchain. You can use whatever provider you desired (check what services they gives you for free) but for run the demo you need a provider that gives access to an **archive node** (special kind of node) and *Alchemy* do it for free, besides you can sing up with google account, so, its quiet fast. Once logged in, generally you must to create a project and then they assign to it a ‘link’ (indeed its a kind of key) that allows you to uses their services. In Alchemy look like, 
-```
-https://eth-mainnet.alchemyapi.io/v2/qolQHYLqPhksKzW-QBEzlzdW14pRZnTr
-```
+<!---->https://eth-mainnet.alchemyapi.io/v2/qolQHYLqPhksKzW-QBEzlzdW14pRZnTr
+
 2) Create a .env file on the root project directory with the paremeters of the bots, for the demo an example .env with valid parameters can be created as follow
 ```bash
 printf "ADDR_ARBITRAGE_CONTRACT = '0x3eA3E0816b7Caf6e12D5083D02D4cb5e4330CE18'\nADDR_DAI = '0x6b175474e89094c44da98b954eedeac495271d0f'\nADDR_ETH = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'\nADDR_SFACTORY = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac'\nADDR_SROUTER = '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F'\nADDR_TOKEN0 = '0x55B7162F06e4Cf5b2e06E5757c1e474dB8E10516'\nADDR_TOKEN1 = '0xedC71FcFD28912ab32b21Efaa906f39F628De110'\nADDR_UFACTORY = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'\nADDR_UROUTER = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'\nADDR_UTILS = '0xE78941610Ffef0eEA391BAe6d842175E389973E9'\nLOCAL_DEPLOYMENT = true\nPRICE_TOKEN0 = 190.2\nPRICE_TOKEN1 = 235.7\nPRIVATE_KEY = '0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d'\nPROJECT_ID = '3c40e9b697e547b4ae7e72dceb82ad11'\nVALID_PERIOD = 5\n" > .env
