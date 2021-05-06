@@ -86,7 +86,7 @@ Once the arbitrage occur (you will notice because the logs on the console) Ctrol
 
 3) Create a .env file on the project directory with valid parameter values, see bot_flashswap.js or bot_normalswap.js to see what they are.
 
-4) Assuming you own an account with the enough eth for paying the gas and fees (and if you use normal swap the tokens as well) you are ready to run the bots. **_Remember that as they are, the bots are not ready for production and even with the changes proposed bellow I dont recommend use it for that porpuse, do it at your own risk_**.
+4) Assuming you own an account with the enough eth for paying the gas and fees (and if you use normal swap the tokens as well) you are ready to run the bots. **_Remember that as they are, the bots are not ready for production and even with the changes proposed bellow I dont recommend use them for that porpuse, do it at your own risk_**.
 
 ## Considerations for production
 
