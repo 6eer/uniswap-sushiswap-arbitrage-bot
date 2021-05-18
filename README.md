@@ -110,6 +110,8 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 + Maybe an improvement on robustness using event subscription to UniswapV2Pair.Swap() and ERC20.Approval() events can be achieved.
 
++ Select the pools automatically based on, for example, the amount of arbitrage opportunities in the past.
+
 + Instead of printing to the console, print only the trades on a file.
 
 ## Useful resources
