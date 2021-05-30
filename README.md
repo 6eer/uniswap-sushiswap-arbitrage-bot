@@ -100,7 +100,7 @@ function swapExactTokensForTokens(
     uint deadline
 )
 ```
-for safety reasons, if not you could be losing money. see Uniswap docs for more info. (This function is used in bot_normalswap.js and Arbitrajer.sol).
+for safety reasons, if not you could be losing money. see Uniswap docs for more info. (This function is used in bot_normalswap.js and Arbitrager.sol).
 
 + You probably wanna embedded the logic available at Utils.sol on the bots scripts, avoiding the cost of deploy the Utils contract.
 
