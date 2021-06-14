@@ -90,7 +90,7 @@ Once the arbitrage occur (you will notice because the logs on the console) Ctrol
 
 ## Considerations for production
 
-+ **NOTE 12/06/21 ->** I realize that the arbitrage, in the manner that I did it, its not rigth conceptually. The proper way, I think, it would have been using Binance or another CEX (Centralized EXchange) like Coinbase as off-chain oracle and use Avee (lending platform) [flashloans](https://aave.com/flash-loans/) (similar to how flashswaps works) to arbitrage whatever DEX (Decentralized EXchanges) I wished. Personally I only undestand how Uniswap like exchanges works, in other words, AMMs that uses de constant product formula to set the price [(here more info)](https://defiweekly.substack.com/p/the-state-of-amms-3ad). What Im trying to say its that a dont know if other kind of AMMs are arbitrageable (I remember ear of a DEX that auto regulates their prices), so keep that in mind. But having said that, I think it is a good project to familiarize you with the ethereum blackchain, understand how it works, the software stack and learn how one of the most important protocols that the network has, Uniswap, works. 
++ **NOTE 12/06/21 ->** I realize that the arbitrage, in the manner that I did it, its not rigth conceptually. The proper way, I think, it would have been using Binance or another CEX (Centralized EXchange) like Coinbase as off-chain oracle and use Avee (lending platform) [flashloans](https://aave.com/flash-loans/) (similar to how flashswaps works) to arbitrage whatever DEX (Decentralized EXchanges) I wished. Personally I only undestand how Uniswap like exchanges works, in other words, AMMs that uses de constant product formula to set the price [(here more info)](https://defiweekly.substack.com/p/the-state-of-amms-3ad). What Im trying to say its that a dont know if other kind of AMMs are arbitrageable (I remember ear of a DEX that auto regulates their prices), so keep that in mind. But having said that, I think it is a good project to familiarize you with the ethereum blackchain, understand how it works, the software stack and learn how one of the most important protocols that the network has, Uniswap, works. Good luck!
 
 + Its **_very important_** that you set up an aproppiate value to amountOutMin on
 ```javascript
@@ -119,6 +119,10 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 ## Useful resources
 
 [Build a Flash Loan Arbitrage Bot on Infura](https://blog.infura.io/build-a-flash-loan-arbitrage-bot-on-infura-part-i/?&utm_source=social&utm_medium=facebook&utm_campaign=Tutorials&utm_content=flashbot1) (If you are lost I personally recommend read this post)
+
+[How does Ethereum work, anyway?](https://preethikasireddy.medium.com/how-does-ethereum-work-anyway-22d1df506369)
+
+[Life Cycle of an Ethereum Transaction](https://medium.com/blockchannel/life-cycle-of-an-ethereum-transaction-e5c66bae0f6e)
 
 [Uniswap docs](https://uniswap.org/docs/v2/)
 
