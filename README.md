@@ -108,8 +108,6 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 + Use child process for each block.
 
-+ If on a new block there is no more profit cancel the early child process spawned.
-
 + Maybe an improvement on robustness using event subscription to UniswapV2Pair.Swap() and ERC20.Approval() events can be achieved.
 
 + Select the pools automatically based on, for example, the amount of arbitrage opportunities in the past.
