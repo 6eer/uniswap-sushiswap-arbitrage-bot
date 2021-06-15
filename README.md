@@ -124,9 +124,15 @@ for safety reasons, if not you could be losing money. see Uniswap docs for more 
 
 [Life Cycle of an Ethereum Transaction](https://medium.com/blockchannel/life-cycle-of-an-ethereum-transaction-e5c66bae0f6e)
 
+[Ganache CLI](https://github.com/trufflesuite/ganache-cli/blob/master/README.md)
+
 [Uniswap docs](https://uniswap.org/docs/v2/)
 
-[Ganache CLI](https://github.com/trufflesuite/ganache-cli/blob/master/README.md)
+[Web3 docs](https://web3js.readthedocs.io/en/v1.3.4/)
+
+[Truffle docs](https://www.trufflesuite.com/docs/truffle/overview)
+
+[Solidity docs](https://docs.soliditylang.org/en/v0.8.5/)
 
 ## License
 
