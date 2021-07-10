@@ -5,6 +5,7 @@
 + [Installation](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#installation)
 + [Running the demo](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#running-the-demo)
 + [Running on a ethereum network](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#running-on-a-ethereum-network)
++ [Notes](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#notes)
 + [Considerations for production](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#considerations-for-production)
 + [Useful resources](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#useful-resources)
 + [License](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot#license)
@@ -88,9 +89,13 @@ Once the arbitrage occur (you will notice because the logs on the console) Ctrol
 
 4) Assuming you own an account with the enough eth for paying the gas and fees (and if you use normal swap the tokens as well) you are ready to run the bots. **_Remember that as they are, the bots are not ready for production and even with the changes proposed bellow I dont recommend use them for that porpuse, do it at your own risk_**.
 
-## Considerations for production
+## Notes
+
++ **NOTE 10/07/21 ->** If u are having gas issues, check out [this tiny thread](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot/issues/2)
 
 + **NOTE 14/06/21 ->** I realize that the arbitrage, in the manner that I did it, its not rigth conceptually. The proper way, I think, it would have been using a CEX (Centralized EXchange) like Binance or Coinbase as off-chain oracle and use Avee (lending platform) [flashloans](https://aave.com/flash-loans/) (similar to how flashswaps works) to arbitrage whatever DEX (Decentralized EXchanges) I wished. The only 'drawback' that I can see with this approach is that you must pay back the flashloan in the same asset you borrow so you probably need and extra trade. Personally I only understand how Uniswap like exchanges works, in other words, AMMs that uses the constant product formula to set the price [(here more info)](https://defiweekly.substack.com/p/the-state-of-amms-3ad). What Im trying to say its that I dont know if other kind of AMMs are arbitrageable (I remember hear about a DEX that auto regulates its prices), so keep that in mind. But, that said, I think it is a good project to get confidence with the ethereum blackchain, understand how it works, the software stack and learn how one of the most important protocols that the network has, Uniswap, works. Good luck!
+
+## Considerations for production
 
 + Read [this issue](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot/issues/5) (useful).
 
