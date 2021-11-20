@@ -89,6 +89,8 @@ Once the arbitrage occur (you will notice because the logs on the console) Ctrol
 
 4) Assuming you own an account with the enough eth for paying the gas and fees (and if you use normal swap the tokens as well) you are ready to run the bots. **_Remember that as they are, the bots are not ready for production and even with the changes proposed bellow I dont recommend use them for that porpuse, do it at your own risk_**.
 
+5) You may consider deploying Utils contract to ropsten network to calculate the maximum profit and use it with your production ready arbitrage contract.
+
 ## Notes
 
 + **10/07/21 ->** If u are having gas issues, check out [this tiny thread](https://github.com/6eer/uniswap-sushiswap-arbitrage-bot/issues/2)
