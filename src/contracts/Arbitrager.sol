@@ -1,6 +1,6 @@
-pragma solidity =0.6.6;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.6;
 
-import 'sushiswap/contracts/uniswapv2/libraries/UniswapV2Library.sol';
 import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
 import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
 import '@uniswap/v2-core/contracts/interfaces/IERC20.sol';
@@ -17,33 +17,38 @@ contract Arbitrager {
   function uniswapV2Call(address _sender, uint _amount0, uint _amount1, bytes calldata _data) external {
       address[] memory path = new address[](2);
       (uint amountRequired, uint deadline) = abi.decode(_data, (uint, uint));
+      address token0 = IUniswapV2Pair(msg.sender).token0();
+      address token1 = IUniswapV2Pair(msg.sender).token1();
+      uint amountEntryToken;
+      IERC20 entryToken;
+      IERC20 exitToken;
       if (_amount0 == 0) {
-        uint amountEntryToken =_amount1;
-        address token0 = IUniswapV2Pair(msg.sender).token0();
-        address token1 = IUniswapV2Pair(msg.sender).token1();
-        IERC20 entryToken = IERC20(token1);
-        IERC20 exitToken = IERC20(token0);
-        entryToken.approve(address(uRouter), amountEntryToken);  
+        amountEntryToken =_amount1;
+        entryToken = IERC20(token1);
+        exitToken = IERC20(token0);
+        approveToken(entryToken, amountEntryToken);
         path[0] = token1; 
         path[1] = token0;
-        uint amountReceived = uRouter.swapExactTokensForTokens(amountEntryToken, 0, path, address(this), deadline)[1];
-        exitToken.transfer(msg.sender, amountRequired);      
-        exitToken.transfer(_sender, amountReceived-amountRequired);   
+        takeProfit(exitToken, _sender, amountRequired, amountEntryToken, path, deadline);
       } else {
-        uint amountEntryToken = _amount0;
-        address token0 = IUniswapV2Pair(msg.sender).token0();
-        address token1 = IUniswapV2Pair(msg.sender).token1();
-        IERC20 entryToken = IERC20(token0);
-        IERC20 exitToken = IERC20(token1);
-        entryToken.approve(address(uRouter), amountEntryToken);
+        amountEntryToken = _amount0;
+        entryToken = IERC20(token0);
+        exitToken = IERC20(token1);
+        approveToken(entryToken, amountEntryToken);
         path[0] = token0;
         path[1] = token1;
-        uint amountReceived = uRouter.swapExactTokensForTokens(amountEntryToken, 0, path, address(this), deadline)[1];
-        exitToken.transfer(msg.sender, amountRequired);
-        exitToken.transfer(_sender, amountReceived-amountRequired);   
+        takeProfit(exitToken, _sender, amountRequired, amountEntryToken, path, deadline);
       }
   }
 
-  
+  function approveToken(IERC20 entryToken, uint amountEntryToken) private {
+     entryToken.approve(address(uRouter), amountEntryToken);  
+  }
+
+  function takeProfit(IERC20 exitToken, address _sender, uint amountRequired, uint amountEntryToken, address[] memory path, uint deadline) private {
+       uint amountReceived = uRouter.swapExactTokensForTokens(amountEntryToken, 0, path, address(this), deadline)[1];
+       exitToken.transfer(msg.sender, amountRequired);
+       exitToken.transfer(_sender, amountReceived-amountRequired);   
+  }
 
 }
