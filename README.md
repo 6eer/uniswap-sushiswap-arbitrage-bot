@@ -1,4 +1,4 @@
-*I'm not maintaining the project anymore, feel free to talk to others in the issues section*
+*I'm not maintaining the project anymore, feel free to talk with others in the issues section*
 
 # Making arbitrage between Uniswap V2 and Sushiswap
 
